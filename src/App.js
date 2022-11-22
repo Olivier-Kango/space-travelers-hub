@@ -7,14 +7,15 @@ import NavBar from './components/Navbar/NavBar';
 import './App.css';
 
 const App = () => (
-  <div className="App">
+  <>
     <NavBar />
+    <div className="spacer" />
     <Routes>
       <Route path="/" element={<Rockets />} />
       <Route path="/missions" element={<Missions />} />
       <Route path="/my-profile" element={<MyProfile />} />
     </Routes>
-  </div>
+  </>
 );
 
 export default App;

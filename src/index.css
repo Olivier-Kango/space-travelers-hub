@@ -16,3 +16,7 @@
 .link:nth-child(3) {
   border-left: 1.5px solid black;
 }
+
+.spacer {
+height: 30px;
+}
