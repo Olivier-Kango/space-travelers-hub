@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+  padding: 0 10px;
+  color: blue;
+}
+
+.link:focus {
+  color: rgb(0, 0, 156);
+  text-decoration: underline;
+}
+
+.link:nth-child(3) {
+  border-left: 1.5px solid black;
+}
