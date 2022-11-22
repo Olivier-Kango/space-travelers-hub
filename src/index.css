@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .link {
   text-decoration: none;
   padding: 0 10px;
@@ -18,5 +19,5 @@
 }
 
 .spacer {
-height: 30px;
+  height: 30px;
 }
