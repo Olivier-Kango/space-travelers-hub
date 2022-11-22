@@ -1,10 +1,14 @@
 const styles = {
   appbar: {
-    backgroundColor: 'silver',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "silver",
   },
   toolbar: {
-    display: 'flex',
-    alignSelf: 'flex-end',
+    display: "flex",
+    alignSelf: "flex-end",
   },
 };
 
