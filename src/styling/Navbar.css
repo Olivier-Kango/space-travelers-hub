@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.link {
+  text-decoration: none;
+  padding: 0 10px;
+  color: blue;
+}
+
+.link:focus {
+  color: rgb(0, 0, 156);
+  text-decoration: underline;
+}
+
+.link:nth-child(3) {
+  border-left: 1.5px solid black;
+}
