@@ -4,7 +4,6 @@ import Missions from './components/Missions/Missions';
 import MyProfile from './components/MyProfile/MyProfile';
 import Rockets from './components/Rockets/Rockets';
 import NavBar from './components/Navbar/NavBar';
-import './App.css';
 
 const App = () => (
   <>
