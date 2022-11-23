@@ -10,12 +10,14 @@ import {
 import logo from '../../../assets/images/planet.png';
 import styles from './styles';
 
-const Rocket = () => (
+const Rocket = ({ rocket }) => (
   <Card sx={styles.card}>
-    <CardMedia src={logo} title="Rocket" />
+    <CardMedia sx={styles.media} image={rocket.flickr_images[0]} title="Rocket" />
     <CardContent>
-      <Typography variant="h5" gutterBottom>Title</Typography>
-      <Typography variant="body2">Description</Typography>
+      <Typography variant="h5" gutterBottom>
+        {rocket.rocket_name}
+      </Typography>
+      <Typography variant="body2">{rocket.description}</Typography>
       <CardActions>
         <Button variant="contained" size="small" color="primary">
           Reserve Rocket
