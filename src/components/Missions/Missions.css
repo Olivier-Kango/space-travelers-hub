@@ -1,0 +1,62 @@
+
+.container {
+  margin: 0 20px 20px 20px;
+}
+
+.mission {
+  display: flex;
+}
+
+.mission:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.308);
+}
+
+.title {
+  display: flex;
+}
+
+.mission h3,
+.title h3:nth-child(1) {
+  flex: 1.5;
+  border: 1px solid rgba(0, 0, 0, 0.269);
+}
+
+.mission p,
+.title h3:nth-child(2) {
+  flex: 5;
+  border: 1px solid rgba(0, 0, 0, 0.269);
+}
+
+.member,
+.title h3:nth-child(3) {
+  flex: 1.1;
+  border: 1px solid rgba(0, 0, 0, 0.269);
+}
+
+.join,
+.title h3:nth-child(4) {
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.269);
+}
+
+.member,
+.join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join button {
+  padding: 4px 6px;
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.member button {
+  color: white;
+  background: gray;
+  border: none;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
