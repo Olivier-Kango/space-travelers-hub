@@ -7,7 +7,6 @@ import {
   CardContent,
   Button,
 } from '@mui/material';
-import logo from '../../../assets/images/planet.png';
 import styles from './styles';
 
 const Rocket = ({ rocket }) => (
