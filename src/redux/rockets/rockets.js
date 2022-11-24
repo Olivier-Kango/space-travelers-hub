@@ -10,11 +10,14 @@ const slice = createSlice({
   name: 'Rockets',
   initialState: [],
   reducers: {
-    reserveRockets: (state, { id }) => {
-      state.map((rocket) => {
-        if (rocket.id === id) return rocket;
+    reserveRockets: (state, { payload }) => {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== payload) {
+          return rocket;
+        }
         return { ...rocket, reserved: true };
       });
+      return newState;
     },
   },
   extraReducers: (builder) => {
@@ -23,7 +26,7 @@ const slice = createSlice({
       payload.map((rocket) => {
         newState.push({
           ...state,
-          id: rocket.id,
+          id: rocket.rocket_id,
           name: rocket.rocket_name,
           description: rocket.description,
           image: rocket.flickr_images[0],
@@ -35,5 +38,6 @@ const slice = createSlice({
   },
 });
 
+export const { reserveRockets } = slice.actions;
 export { fetchRockets };
 export default slice.reducer;

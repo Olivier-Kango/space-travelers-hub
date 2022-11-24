@@ -8,7 +8,7 @@ import styles from './styles';
 const Rockets = () => {
   const dispatch = useDispatch();
   const selector = useSelector(state => state.rockets);
-  console.log(selector);
+  // console.log(selector);
   useEffect(() => {
     dispatch(fetchRockets());
   }, []);
