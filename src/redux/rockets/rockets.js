@@ -25,8 +25,8 @@ const slice = createSlice({
           return rocket;
         }
         return { ...rocket, reserved: false };
-      })
-       return newState;
+      });
+      return newState;
     },
   },
   extraReducers: (builder) => {

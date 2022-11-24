@@ -6,6 +6,7 @@ import {
   Typography,
   CardContent,
   Button,
+  Badge,
 } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { reserveRockets, cancelReserve } from "../../../redux/rockets/rockets";
@@ -21,7 +22,8 @@ const Rocket = ({ rocket }) => {
         <Typography variant="h5" gutterBottom>
           {rocket.name}
         </Typography>
-        <Typography variant="body2">{rocket.description}</Typography>
+          {rocket.reserved && (<Badge sx={styles.badge} overlap="rectangular" badgeContent="Reserved" color="success" />) }
+          <Typography variant="body2">{rocket.description}</Typography>
         <CardActions>
           {rocket.reserved ? (
             <Button
