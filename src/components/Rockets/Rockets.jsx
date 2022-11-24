@@ -17,7 +17,7 @@ const Rockets = () => {
     <section>
       <Box sx={styles.box}>
         {selector.map((rocket) => (
-          <Rocket rocket={rocket} key={rocket.rocket_id}/>
+          <Rocket rocket={rocket} key={rocket.id}/>
         ))}
       </Box>
     </section>

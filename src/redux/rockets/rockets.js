@@ -9,9 +9,29 @@ const fetchRockets = createAsyncThunk('fetchRockets', async () => {
 const slice = createSlice({
   name: 'Rockets',
   initialState: [],
+  reducers: {
+    reserveRockets: (state, { id }) => {
+      state.map((rocket) => {
+        if (rocket.id === id) return rocket;
+        return { ...rocket, reserved: true };
+      });
+    },
+  },
   extraReducers: (builder) => {
-    builder
-      .addCase(fetchRockets.fulfilled, (state, { payload }) => payload);
+    builder.addCase(fetchRockets.fulfilled, (state, { payload }) => {
+      const newState = [];
+      payload.map((rocket) => {
+        newState.push({
+          ...state,
+          id: rocket.id,
+          name: rocket.rocket_name,
+          description: rocket.description,
+          image: rocket.flickr_images[0],
+        });
+        return newState;
+      });
+      return [...newState];
+    });
   },
 });
 
