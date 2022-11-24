@@ -50,12 +50,12 @@
 .join button {
   padding: 4px 6px;
   background-color: transparent;
-  border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
 }
 
 .change {
   color: red;
+  border: 2px solid red;
 }
 
 .member,

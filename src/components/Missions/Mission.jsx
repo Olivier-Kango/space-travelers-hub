@@ -1,23 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { reservedMission } from '../../redux/missions/reservedMission';
+// import { reservedMission } from '../../redux/missions/reservedMission';
 import './Missions.css';
+import { MissionStatus } from '../../redux/missions/missions';
 
-let reserved = false;
 const Mission = (mission) => {
-  const { id, name, description } = mission;
+  const {
+    id, name, description,
+  } = mission;
   const status = useSelector((state) => state.reducerReservedMission);
   const dispatch = useDispatch();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    reserved = !reserved;
-    if (reserved) {
-      e.target.classList.add('change');
-      return dispatch(reservedMission('Leave Mission'));
-    }
-    e.target.classList.remove('change');
-    return dispatch(reservedMission('Join Mission'));
+  const handleClick = (id) => {
+    console.log(id);
+    dispatch(MissionStatus(id));
   };
 
   return (
@@ -29,7 +25,7 @@ const Mission = (mission) => {
         <button
           type="button"
           id={`button-${id}`}
-          onClick={(e) => handleClick(e)}
+          onClick={() => handleClick(id)}
         >
           {status}
         </button>

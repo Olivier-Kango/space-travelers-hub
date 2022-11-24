@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, current } from '@reduxjs/toolkit';
 import getMissionsApi from '../../api/SpaceApi';
 
 const LOAD_MISSIONS = 'LOAD_MISSIONS';
@@ -7,7 +7,7 @@ const LOAD_MISSIONS = 'LOAD_MISSIONS';
 export const loadMissions = createAsyncThunk(LOAD_MISSIONS, async () => {
   try {
     const response = await getMissionsApi();
-    return response.data.map((mission) => ({ ...mission, reserved: true }));
+    return response.data.map((mission) => ({ ...mission, reserved: false }));
   } catch (error) {
     throw new Error(error);
   }
@@ -16,10 +16,28 @@ export const loadMissions = createAsyncThunk(LOAD_MISSIONS, async () => {
 // SPACE STORE
 const MissionsSlice = createSlice({
   name: 'missionsstore',
-  initialState: {},
+  initialState: { mission: [] },
+  reducers: {
+    MissionStatus: (state, { payload }) => {
+      console.log(current(state));
+      const x = current(state);
+      const data = x.mission.map((m) => (
+        m.mission_id === payload ? { ...m, reserved: !m.reserved } : m
+      ));
+      console.log(data);
+      return {
+        ...state,
+        mission: data,
+      };
+    },
+  },
   extraReducers: (builder) => {
-    builder.addCase(loadMissions.fulfilled, (state, action) => action.payload);
+    builder.addCase(loadMissions.fulfilled, (state, action) => ({
+      ...state,
+      mission: action.payload,
+    })).addCase(loadMissions.pending, (state) => ({ ...state }));
   },
 });
 
 export default MissionsSlice;
+export const { MissionStatus } = MissionsSlice.actions;
