@@ -30,10 +30,12 @@ const MissionsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(loadMissions.fulfilled, (state, action) => ({
-      ...state,
-      mission: action.payload,
-    })).addCase(loadMissions.pending, (state) => ({ ...state }));
+    builder
+      .addCase(loadMissions.fulfilled, (state, action) => ({
+        ...state,
+        mission: action.payload,
+      }))
+      .addCase(loadMissions.pending, (state) => ({ ...state }));
   },
 });
 

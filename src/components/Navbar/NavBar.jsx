@@ -9,7 +9,9 @@ const NavBar = () => (
     <AppBar position="static" sx={styles.appbar}>
       <div className="logo">
         <img src={logo} alt="logo" />
-        <Typography variant="h5" sx={styles.logoTitle}>Space Travelers&apos; Hub</Typography>
+        <Typography variant="h5" sx={styles.logoTitle}>
+          Space Travelers&apos; Hub
+        </Typography>
       </div>
       <Toolbar variant="dense" sx={styles.toolbar}>
         <Link to="/" className="link">
