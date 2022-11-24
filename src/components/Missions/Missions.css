@@ -43,10 +43,6 @@
   padding: 4px;
 }
 
-.join button:hover {
-  cursor: pointer;
-}
-
 .join button {
   padding: 4px 6px;
   background-color: transparent;
@@ -71,4 +67,8 @@
   border: none;
   border-radius: 4px;
   padding: 1px 4px;
+}
+
+.join button:hover {
+  cursor: pointer;
 }
