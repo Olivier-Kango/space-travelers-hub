@@ -5,7 +5,7 @@ import { loadMissions } from '../../redux/missions/missions';
 import './Missions.css';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missions);
+  const { mission } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,12 +21,14 @@ const Missions = () => {
         <h3>{}</h3>
       </div>
       <div className="missions">
-        {Array.from(missions).map((mission) => (
+        {Array.from(mission).map((mission) => (
           <Mission
             id={mission.mission_id}
             key={`${mission.mission_id}`}
             name={mission.mission_name}
             description={mission.description}
+            text={mission.reserved ? 'Leave Mission' : 'Join Mission'}
+            member={mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
           />
         ))}
       </div>

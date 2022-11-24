@@ -19,24 +19,39 @@
 .title h3:nth-child(1) {
   flex: 1.5;
   border: 1px solid rgba(0, 0, 0, 0.269);
+  padding: 4px;
 }
 
 .mission p,
 .title h3:nth-child(2) {
   flex: 5;
   border: 1px solid rgba(0, 0, 0, 0.269);
+  padding: 4px;
 }
 
 .member,
 .title h3:nth-child(3) {
   flex: 1.1;
   border: 1px solid rgba(0, 0, 0, 0.269);
+  padding: 4px;
 }
 
 .join,
 .title h3:nth-child(4) {
   flex: 1;
   border: 1px solid rgba(0, 0, 0, 0.269);
+  padding: 4px;
+}
+
+.join button {
+  padding: 4px 6px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.change {
+  color: red;
+  border: 2px solid red;
 }
 
 .member,
@@ -46,17 +61,23 @@
   justify-content: center;
 }
 
-.join button {
-  padding: 4px 6px;
-  background-color: transparent;
-  border: 1.5px solid rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-}
-
 .member button {
   color: white;
-  background: gray;
+
+  /* background: gray; */
   border: none;
   border-radius: 4px;
   padding: 1px 4px;
+}
+
+.active {
+  background: #1da2b9;
+}
+
+.inactive {
+  background: gray;
+}
+
+.join button:hover {
+  cursor: pointer;
 }
