@@ -19,6 +19,15 @@ const slice = createSlice({
       });
       return newState;
     },
+    cancelReserve: (state, { payload }) => {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: false };
+      })
+       return newState;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, { payload }) => {
@@ -38,6 +47,6 @@ const slice = createSlice({
   },
 });
 
-export const { reserveRockets } = slice.actions;
+export const { reserveRockets, cancelReserve } = slice.actions;
 export { fetchRockets };
 export default slice.reducer;
