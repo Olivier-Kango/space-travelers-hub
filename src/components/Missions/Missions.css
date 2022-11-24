@@ -43,18 +43,26 @@
   padding: 4px;
 }
 
-.member,
-.join {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.join button:hover {
+  cursor: pointer;
 }
 
 .join button {
   padding: 4px 6px;
   background-color: transparent;
-  border: 1.5px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
+}
+
+.change {
+  color: red;
+}
+
+.member,
+.join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .member button {
