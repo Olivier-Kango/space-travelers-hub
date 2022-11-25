@@ -27,7 +27,8 @@ const Missions = () => {
             key={`${mission.mission_id}`}
             name={mission.mission_name}
             description={mission.description}
-            reserved={mission.reserved}
+            text={mission.reserved ? 'Leave Mission' : 'Join Mission'}
+            member={mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
           />
         ))}
       </div>
