@@ -59,12 +59,12 @@ const Rocket = ({ rocket }) => {
 };
 
 Rocket.propTypes = {
-  rocket: PropTypes.object,
-  image: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  reserved: PropTypes.bool,
-  id: ropTypes.string,
+  rocket: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Rocket;
