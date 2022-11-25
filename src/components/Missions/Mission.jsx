@@ -1,33 +1,39 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-// import { reservedMission } from '../../redux/missions/reservedMission';
+import { useDispatch } from 'react-redux';
 import './Missions.css';
 import { MissionStatus } from '../../redux/missions/missions';
 
 const Mission = (mission) => {
   const {
-    id, name, description,
+    id, name, description, text, member,
   } = mission;
-  const status = useSelector((state) => state.reducerReservedMission);
+
   const dispatch = useDispatch();
 
   const handleClick = (id) => {
-    console.log(id);
     dispatch(MissionStatus(id));
   };
 
   return (
-    <div key={name} id={id} className="mission">
+    <div key={name} className="mission">
       <h3>{name}</h3>
       <p>{description}</p>
-      <div className="member"><button type="button">NOT A MEMBER</button></div>
+      <div className="member">
+        <button
+          type="button"
+          className={member === 'Active Member' ? 'active' : 'inactive'}
+        >
+          {member}
+        </button>
+      </div>
       <div className="join">
         <button
           type="button"
-          id={`button-${id}`}
+          id={id}
           onClick={() => handleClick(id)}
+          className={text === 'Leave Mission' && 'change'}
         >
-          {status}
+          {text}
         </button>
       </div>
     </div>
