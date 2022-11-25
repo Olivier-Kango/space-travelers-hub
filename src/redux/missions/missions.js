@@ -19,12 +19,10 @@ const MissionsSlice = createSlice({
   initialState: { mission: [] },
   reducers: {
     MissionStatus: (state, { payload }) => {
-      console.log(current(state));
       const x = current(state);
       const data = x.mission.map((m) => (
         m.mission_id === payload ? { ...m, reserved: !m.reserved } : m
       ));
-      console.log(data);
       return {
         ...state,
         mission: data,
