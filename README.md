@@ -1,48 +1,97 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a id="readme-top"></a>
 
-# Space Travelers' Hub
+<div align="center">
 
- In this task, we will be working with the real live data from the SpaceX API. Our task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
-## Built With
-- React
-- Redux/ Redux toolkit
-- Material UI
-- CSS3
+  <img src="https://user-images.githubusercontent.com/108806646/203941212-a33b97da-6d84-4649-b763-4e8191c24805.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-## Key Features
+  <h3><b>README</b></h3>
 
-- User Can book a rocket
-- user can see his profile with reserved rockets and mmissions
-- User can Cancel his booking any time.
+</div>
 
-## Live Demo
+<!-- TABLE OF CONTENTS -->
 
-[Space Travelers' Link](https://spacetravelersod.netlify.app/)
+# 📗 Table of Contents
 
-## Screen Short
-### Rockets
-<p align="center">
-  <img width="1181" alt="space-travelers__rockets" src="https://user-images.githubusercontent.com/108806646/203862150-3d03d28f-fffa-462f-a306-00c7b1bedb4c.png">
-</p>
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### Missions
-<p align="center">
-  <img width="1165" alt="space-travelers__missions" src="https://user-images.githubusercontent.com/108806646/203862315-29b3280b-a5a0-4ff3-9404-ae9cd9b036e0.png">
-</p>
+<!-- PROJECT DESCRIPTION -->
 
-### My Profile
-<p align="center">
-  <img width="1152" alt="space-travelers__my-profile" src="https://user-images.githubusercontent.com/108806646/203862378-2c1a300f-39b1-45e2-85aa-ba5e00da25c5.png">
-</p>
+# 📖 Space Travelers' Hub <a id="about-project"></a>
 
-nters
+>  In this task, we will be working with the real live data from the SpaceX API. Our task is to build a web application for a company that provides commercial and scientific space travel services.
+
+**Space Travelers' Hub** is a an application which can allow users to book rockets and join selected space missions.
+
+## 🛠 Built With <a id="built-with"></a>
+
+### Tech Stack <a id="tech-stack"></a>
+
+> To build this project we used a tech stack detailed below:
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://www.w3schools.com/css/css_intro.asp">CSS</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a id="key-features"></a>
+
+> Describe between 1-3 key features of the application.
+
+- **User Can book a rocket**
+- **user can see his profile with reserved rockets and mmissions**
+- **User can Cancel his booking any time.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a id="live-demo"></a>
+
+> Please click the link below to open our webpage in your browser
+
+- [Live Demo Link](https://spacetravelersod.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a id="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-- You should be having [Node.js](https://nodejs.org/en/) installed on your computer
+In order to run this project you need:
+
+- To install [Node.js](https://nodejs.org/en/) on your computer.
+
 ### Setup
 
-To get a local copy up and running follow these simple example steps.
+Clone this repository to your desired folder:
 
 1. Navigate to a folder where you want the cloned file to appear
 
@@ -53,11 +102,18 @@ To get a local copy up and running follow these simple example steps.
       
    ```
 
-3. run `npm install ` to install all the necessary dependencies including the linters
+### Install
 
-4. Navigate to the folder called space-travelers-hub/ and open this project using your editor
-## run start
-In the project directory, you can run:
+Install this project with:
+
+run `npm install ` to install all the necessary dependencies including the linters
+
+--->
+
+### Usage
+
+To run the project, execute the following command:
+
 ### `npm start`
 - This will run the react app in your browser 
 
@@ -67,7 +123,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## Author
+### Run tests
+
+To run tests, run the following command:
+
+### `npm run test`
+--->
+
+### Deployment
+
+You can deploy this project using:
+
+- [Netlify](https://app.netlify.com/teams/olivierkango/overview), or
+- [Vercel](https://vercel.com/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a id="authors"></a>
+
+> This project was built by two Developers:
+
 
 👤 **Olivier Kango**
 
@@ -80,25 +157,49 @@ You may also see any lint errors in the console.
 - Twitter: [@DJ_etiya](https://twitter.com/Degisew-mengist)
 - LinkedIn: [degisew](https://www.linkedin.com/in/degisew-mengist)
 
-## Future Features
-- We will add a dragon page 
-- we will add a little inspirational quote
-- we will add about us page
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🤝 Contributing
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a id="future-features"></a>
+
+- **We will add a dragon page**
+- **we will add a little inspirational quote**
+- **we will add about us page**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a id="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Olivier-Kango/space-travelers-hub/issues/new).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
+## ⭐️ Show your support <a id="support"></a>
 
-- Thanks to Microverse and my Coding Partners
+> Give a ⭐ if you like this project!
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This project is [MIT](./MIT.md) licensed.
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a id="acknowledgements"></a>
+
+> Thanks to Microverse and my Coding Partners
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a id="license"></a>
+
+This project is [MIT](./LICENSE.txt) licensed.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
