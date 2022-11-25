@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Space Travelers' Link](https://space-travelers-hub-vevm.vercel.app/)
+[Space Travelers' Link](https://space-travelers-hub-wkox.vercel.app/)
 
 ## Screen Short
 ### Rockets
