@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardMedia,
@@ -7,11 +7,11 @@ import {
   CardContent,
   Button,
   Badge,
-} from "@mui/material";
-import { useDispatch } from "react-redux";
-import PropTypes from "prop-types";
-import { reserveRockets, cancelReserve } from "../../../redux/rockets/rockets";
-import styles from "./styles";
+} from '@mui/material';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { reserveRockets, cancelReserve } from '../../../redux/rockets/rockets';
+import styles from './styles';
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ const Rocket = ({ rocket }) => {
 };
 
 Rocket.propTypes = {
-  rocket: PropTypes.object.isRequired,
+  rocket: PropTypes.objectOf(PropTypes.any).isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
