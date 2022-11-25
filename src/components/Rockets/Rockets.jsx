@@ -7,8 +7,8 @@ import styles from './styles';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const selector = useSelector(state => state.rockets);
-  // console.log(selector);
+  const selector = useSelector((state) => state.rockets);
+
   useEffect(() => {
     dispatch(fetchRockets());
   }, []);
@@ -17,11 +17,11 @@ const Rockets = () => {
     <section>
       <Box sx={styles.box}>
         {selector.map((rocket) => (
-          <Rocket rocket={rocket} key={rocket.id}/>
+          <Rocket rocket={rocket} key={rocket.id} />
         ))}
       </Box>
     </section>
   );
-  }
+};
 
 export default Rockets;

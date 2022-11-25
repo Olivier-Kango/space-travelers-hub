@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardMedia,
@@ -7,10 +7,11 @@ import {
   CardContent,
   Button,
   Badge,
-} from "@mui/material";
-import { useDispatch } from "react-redux";
-import { reserveRockets, cancelReserve } from "../../../redux/rockets/rockets";
-import styles from "./styles";
+} from '@mui/material';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { reserveRockets, cancelReserve } from '../../../redux/rockets/rockets';
+import styles from './styles';
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();
@@ -22,8 +23,15 @@ const Rocket = ({ rocket }) => {
         <Typography variant="h5" gutterBottom>
           {rocket.name}
         </Typography>
-          {rocket.reserved && (<Badge sx={styles.badge} overlap="rectangular" badgeContent="Reserved" color="success" />) }
-          <Typography variant="body2">{rocket.description}</Typography>
+        {rocket.reserved && (
+          <Badge
+            sx={styles.badge}
+            overlap="rectangular"
+            badgeContent="Reserved"
+            color="success"
+          />
+        )}
+        <Typography variant="body2">{rocket.description}</Typography>
         <CardActions>
           {rocket.reserved ? (
             <Button
@@ -48,6 +56,15 @@ const Rocket = ({ rocket }) => {
       </CardContent>
     </Card>
   );
+};
+
+Rocket.propTypes = {
+  rocket: PropTypes.instanceOf(Object).isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Rocket;
