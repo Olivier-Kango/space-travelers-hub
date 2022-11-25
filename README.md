@@ -59,8 +59,6 @@
 
 ### Key Features <a id="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **User Can book a rocket**
 - **user can see his profile with reserved rockets and mmissions**
 - **User can Cancel his booking any time.**
