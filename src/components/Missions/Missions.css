@@ -63,10 +63,19 @@
 
 .member button {
   color: white;
-  background: gray;
+
+  /* background: gray; */
   border: none;
   border-radius: 4px;
   padding: 1px 4px;
+}
+
+.active {
+  background: #1da2b9;
+}
+
+.inactive {
+  background: gray;
 }
 
 .join button:hover {
