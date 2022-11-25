@@ -9,6 +9,7 @@ import {
   Badge,
 } from "@mui/material";
 import { useDispatch } from "react-redux";
+import PropTypes from "prop-types";
 import { reserveRockets, cancelReserve } from "../../../redux/rockets/rockets";
 import styles from "./styles";
 
@@ -22,8 +23,15 @@ const Rocket = ({ rocket }) => {
         <Typography variant="h5" gutterBottom>
           {rocket.name}
         </Typography>
-          {rocket.reserved && (<Badge sx={styles.badge} overlap="rectangular" badgeContent="Reserved" color="success" />) }
-          <Typography variant="body2">{rocket.description}</Typography>
+        {rocket.reserved && (
+          <Badge
+            sx={styles.badge}
+            overlap="rectangular"
+            badgeContent="Reserved"
+            color="success"
+          />
+        )}
+        <Typography variant="body2">{rocket.description}</Typography>
         <CardActions>
           {rocket.reserved ? (
             <Button
@@ -48,6 +56,15 @@ const Rocket = ({ rocket }) => {
       </CardContent>
     </Card>
   );
+};
+
+Rocket.propTypes = {
+  rocket: PropTypes.object,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  reserved: PropTypes.bool,
+  id: ropTypes.string,
 };
 
 export default Rocket;
