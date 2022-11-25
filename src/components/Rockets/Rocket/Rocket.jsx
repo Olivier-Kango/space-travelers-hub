@@ -59,7 +59,7 @@ const Rocket = ({ rocket }) => {
 };
 
 Rocket.propTypes = {
-  rocket: PropTypes.objectOf(PropTypes.object).isRequired,
+  rocket: PropTypes.instanceOf(Object).isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
