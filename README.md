@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Space Travelers' Link](https://space-travelers-hub-wkox.vercel.app/)
+[Space Travelers' Link](https://spacetravelersod.netlify.app/)
 
 ## Screen Short
 ### Rockets
