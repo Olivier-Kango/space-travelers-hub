@@ -7,7 +7,12 @@ const LOAD_MISSIONS = 'LOAD_MISSIONS';
 export const loadMissions = createAsyncThunk(LOAD_MISSIONS, async () => {
   try {
     const response = await getMissionsApi();
-    return response.data.map((mission) => ({ ...mission, reserved: false }));
+    return response.data.map((mission) => ({
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      description: mission.description,
+      reserved: false,
+    }));
   } catch (error) {
     throw new Error(error);
   }

@@ -9,9 +9,7 @@ const Rockets = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.rockets);
 
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
+  useEffect(() => { if (selector.length === 0) { dispatch(fetchRockets()); } }, []);
 
   return (
     <section>

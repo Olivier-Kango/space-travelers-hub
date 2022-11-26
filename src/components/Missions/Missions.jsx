@@ -6,11 +6,10 @@ import './Missions.css';
 
 const Missions = () => {
   const { mission } = useSelector((state) => state.missions);
+  console.log(mission);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(loadMissions());
-  }, []);
+  useEffect(() => { if (mission.length === 0) { dispatch(loadMissions()); } }, []);
 
   return (
     <section className="container">
@@ -21,7 +20,7 @@ const Missions = () => {
         <h3>{}</h3>
       </div>
       <div className="missions">
-        {Array.from(mission).map((mission) => (
+        {mission.map((mission) => (
           <Mission
             id={mission.mission_id}
             key={`${mission.mission_id}`}
