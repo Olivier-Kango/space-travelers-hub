@@ -40,6 +40,12 @@
 
 **Space Travelers' Hub** is a an application which can allow users to book rockets and join selected space missions.
 
+Please click on the video below to more explanation
+
+## Video for explanation
+
+[<img width="500" alt="calculator" src="https://user-images.githubusercontent.com/108806646/204026408-a55bf2f5-227a-42d9-99f9-79d5168ca009.png">](https://www.youtube.com/watch?v=0xHiAKMv8yI)
+
 ## 🛠 Built With <a id="built-with"></a>
 
 ### Tech Stack <a id="tech-stack"></a>
